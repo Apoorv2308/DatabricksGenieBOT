@@ -30,11 +30,17 @@ logger = logging.getLogger(__name__)
 # Env vars
 load_dotenv()
 
-DATABRICKS_SPACE_ID = os.getenv("DATABRICKS_SPACE_ID")
-DATABRICKS_HOST = os.getenv("DATABRICKS_HOST")
-DATABRICKS_TOKEN = os.getenv("DATABRICKS_TOKEN")
-APP_ID = os.getenv("MicrosoftAppId", "")
-APP_PASSWORD = os.getenv("MicrosoftAppPassword", "")
+# DATABRICKS_SPACE_ID = os.getenv("DATABRICKS_SPACE_ID")
+# DATABRICKS_HOST = os.getenv("DATABRICKS_HOST")
+# DATABRICKS_TOKEN = os.getenv("DATABRICKS_TOKEN")
+# APP_ID = os.getenv("MicrosoftAppId", "")
+# APP_PASSWORD = os.getenv("MicrosoftAppPassword", "")
+
+DATABRICKS_SPACE_ID = "01ef83f9a05e17e8820c6c31c0fbfc59" #From your Genie Space URL - https://adb-<yourhost>.azuredatabricks.net/genie/rooms/<THIS_ONE_IS_YOUR_GENIE_SPACE_ID>/chats/<not_this_one>
+DATABRICKS_HOST = "https://adb-1550459516441610.10.azuredatabricks.net" #From your Databricks URL
+DATABRICKS_TOKEN = "dapi316ce343861d4896cc10e3866094d1ac-2" #From the Settings in your Databricks workspace
+APP_ID = "dfa220e9-0b95-4a3e-b56b-9a032db48375" #From the Azure Bot you created
+APP_PASSWORD = "jvN8Q~LOpYa.ZfUxfPhBffrRptvkGp35tDWk~cn~" #From the Manage Password link in the Azure Bot configuration
 
 workspace_client = WorkspaceClient(
     host=DATABRICKS_HOST,
